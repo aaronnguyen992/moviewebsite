@@ -1,9 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './style/style.css';
+import ApolloClient from 'apollo-boost';
+import { ApolloProvider } from 'react-apollo';
+import { HashRouter, Switch, Route } from 'react-router-dom';
+import NewMovies from './components/Newmovies';
+import MovieInfo from './components/MovieInfo';
+import './style/style.scss';
+
+const client = new ApolloClient();
 const App = () => {
     return (
-        <div>Hello World</div>
+        <HashRouter>
+            <ApolloProvider client={client}>
+                <Switch>
+                    <Route exact path="/" component={NewMovies} />
+                    <Route exact path="/info/:id" component={MovieInfo} />
+                </Switch>
+            </ApolloProvider>
+        </HashRouter>
     )
 }
 
