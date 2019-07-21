@@ -3,6 +3,34 @@ import gql from 'graphql-tag';
 import { Query, graphql } from 'react-apollo';
 
 class MovieInfo extends Component {
+    constructor(){
+        super();
+        this.state={
+            video: null
+        }
+    }
+
+    videoDisplay(video){
+        this.setState({
+            video
+        })
+    }
+
+    videoExit(){
+        this.setState({
+            video: null
+        })
+    }
+
+    videoToggle(){
+        if(this.state.video) return(
+            <div className="youtube-video">
+                <p onClick={() => this.videoExit()}>Close</p>
+                <iframe  width="560" height="315" src={`//www.youtube.com/embed/${this.state.video}` } frameborder="0" allowfullscreen />
+            </div>
+        )
+    }
+
     renderVideos(videos){
         return videos.map(video => {
             return (
@@ -14,6 +42,7 @@ class MovieInfo extends Component {
             )
         })
     }
+
     render(){
         const id = this.props.match.params.id;
         return (
@@ -38,6 +67,7 @@ class MovieInfo extends Component {
                                         <li><strong>Production Companies:</strong> {data.movieInfo.production_companies}</li>
                                     </ul>
                                     <div className="videos">
+                                        {this.videoToggle()}
                                         <h3>Videos</h3>
                                         {this.renderVideos(data.movieInfo.videos)}
                                     </div>
