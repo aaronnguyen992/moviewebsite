@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import MovieReviews from './MovieReviews';
+import MovieCredits from './MovieCredits';
 import gql from 'graphql-tag';
 import { Query, graphql } from 'react-apollo';
 
@@ -71,9 +73,9 @@ class MovieInfo extends Component {
                                         <h3>Videos</h3>
                                         {this.renderVideos(data.movieInfo.videos)}
                                     </div>
-                                    {/* Reviews */}
+                                    <MovieReviews reviews={data.movieInfo.movieReviews} />
                                 </div>
-                                {/* Credits */}
+                                <MovieCredits reviews={data.movieInfo.movieCredits} />
                             </article>
                         </div>
                     )
@@ -98,6 +100,18 @@ query MovieInfo($id: String) {
         videos {
             id
             key
+        }
+        movieReviews {
+            id
+            content
+            author
+        }
+        movieCredits {
+            id
+            character
+            name
+            profile_path
+            order
         }
     }
 }
