@@ -75,7 +75,7 @@ class MovieInfo extends Component {
                                     </div>
                                     <MovieReviews reviews={data.movieInfo.movieReviews} />
                                 </div>
-                                <MovieCredits reviews={data.movieInfo.movieCredits} />
+                                {/* <MovieCredits reviews={data.movieInfo.movieCredits} /> */}
                             </article>
                         </div>
                     )
