@@ -6,8 +6,8 @@ export class MovieCredits extends Component {
             return (
                 <li key={cast.id}>
                     <img src={`https://image.tmdb.org/t/p/w500//${cast.profile_path}`}/>
-                    <div className="castWrapper">
-                        <div className="castWrapper_info">
+                    <div className="moviecredits__castWrapper">
+                        <div className="moviecredits__castWrapper_info">
                             <span>{cast.name}</span>
                             <span>{cast.character}</span>
                         </div>
@@ -18,7 +18,7 @@ export class MovieCredits extends Component {
     }
     render(){
         return (
-            <ul className="cast">{this.renderCast(this.props.credits)}</ul>
+            <ul className="moviecredits__cast">{this.renderCast(this.props.credits)}</ul>
         )
     }
 }

@@ -55,11 +55,11 @@ class MovieInfo extends Component {
                     return (
                         <div>
                             <header style={{backgroundImage: 'url("https://image.tmdb.org/t/p/w500///'+ data.movieInfo.poster_path+'")'}}>
-                                <h2 className="title">{data.movieInfo.title}</h2>
+                                <h2 className="movieinfo__title">{data.movieInfo.title}</h2>
                             </header>
-                            <article className="wrapper">
-                                <p className="description">{data.movieInfo.overview}</p>
-                                <div className="sidebar">
+                            <article className="movieinfo__wrapper">
+                                <p className="movieinfo__description">{data.movieInfo.overview}</p>
+                                <div className="movieinfo__sidebar">
                                     <img src={"https://image.tmdb.org/t/p/w500///"+data.movieInfo.poster_path} className="cover_image" alt="" />
                                     <ul>
                                         <li><strong>Genre:</strong> {data.movieInfo.genres}</li>
@@ -73,9 +73,9 @@ class MovieInfo extends Component {
                                         <h3>Videos</h3>
                                         {this.renderVideos(data.movieInfo.videos)}
                                     </div>
-                                    <MovieReviews reviews={data.movieInfo.movieReviews} />
+                                    <MovieReviews className="movieinfo__reviews" reviews={data.movieInfo.movieReviews} />
                                 </div>
-                                {/* <MovieCredits reviews={data.movieInfo.movieCredits} /> */}
+                                <MovieCredits classname="movieinfo__credits" credits={data.movieInfo.movieCredits} />
                             </article>
                         </div>
                     )
