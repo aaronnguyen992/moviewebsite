@@ -5,7 +5,7 @@ import { ApolloProvider } from 'react-apollo';
 import { HashRouter, Switch, Route } from 'react-router-dom';
 import NewMovies from './components/Newmovies';
 import MovieInfo from './components/MovieInfo';
-import './style/style.scss';
+import './style/main.scss';
 
 const client = new ApolloClient();
 const App = () => {
