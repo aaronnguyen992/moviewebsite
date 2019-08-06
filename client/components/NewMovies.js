@@ -17,20 +17,27 @@ class NewMovies extends React.Component {
     Movies(){
         const mouseHover = this.state.mouseHover ? 'hover' : ''
 
-        return this.props.data.newMovies.map(movie => {
-            return (
-                <article key={movie.id} className="newmovies__list">
-                    <Link to={"/info/"+movie.id}>
-                        <img 
-                            className="newmovies__image" 
-                            src={movie.poster_path}
-                            onMouseEnter={() => this.handleHover()} 
-                            onMouseLeave={() => this.handleHover()} />
-                    </Link>
-                    <h1 className={`newmovies__title ${mouseHover}`}>{movie.title}</h1>
-                </article>
-            );
-        })
+        return (
+            <div className="newmovies">
+                <div className="newmovies__header">What's Out</div>
+                {
+                    this.props.data.newMovies.map(movie => {
+                        return (
+                            <article key={movie.id} className="newmovies__list">
+                                <Link to={"/info/"+movie.id}>
+                                    <img 
+                                        className="newmovies__image" 
+                                        src={movie.poster_path}
+                                        onMouseEnter={() => this.handleHover()} 
+                                        onMouseLeave={() => this.handleHover()} />
+                                </Link>
+                                <h1 className={`newmovies__title ${mouseHover}`}>{movie.title}</h1>
+                            </article>
+                        );
+                    })
+                }
+            </div>
+        )
     }
 
     render(){
