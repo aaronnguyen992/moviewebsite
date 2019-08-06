@@ -1,14 +1,23 @@
 $ns: '.newmovies';
 
 #{$ns} {
-    
+    position: absolute;
+    width: 100%;
+
+    &__header {
+        font-size: 10rem;
+        position: relative;
+        text-transform: uppercase;
+        left: 40%;
+    }
 
     &__list {
-        width: 16.66667%;
-        height: 65rem;
-        float: left;
+        width: 50rem;
+        height: 75rem;
+        float: right;
         position: relative;
         padding: 1rem 1rem 0 1rem;
+
     }
 
     &__image {
