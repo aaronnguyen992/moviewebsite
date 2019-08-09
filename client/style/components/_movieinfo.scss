@@ -5,4 +5,32 @@ $ns: '.movieinfo';
     &__title {
         font-size: 4rem;
     }
+
+    &__wrapper {
+        position: absolute;
+        width: 100%;
+    }
+
+    &__description {
+        font-size: 2rem;
+        width: 30%;
+        margin: 2%;
+    }
+
+    &__sidebar {
+        position: absolute;
+        right: 5%;
+        top: 0;
+        width: 40%;
+
+        &-data{
+            list-style: none;
+        }
+    }
+
+    &__credits {
+        width: 30%;
+        margin: 2%;
+        padding: 1rem;
+    }
 }
