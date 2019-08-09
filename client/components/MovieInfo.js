@@ -60,15 +60,15 @@ class MovieInfo extends Component {
                             <article className="movieinfo__wrapper">
                                 <p className="movieinfo__description">{data.movieInfo.overview}</p>
                                 <div className="movieinfo__sidebar">
-                                    <img src={"https://image.tmdb.org/t/p/w500///"+data.movieInfo.poster_path} className="cover_image" alt="" />
-                                    <ul>
+                                    <img src={"https://image.tmdb.org/t/p/w500///"+data.movieInfo.poster_path} className="movieinfo__poster" alt="" />
+                                    <ul className="movieinfo__sidebar-data">
                                         <li><strong>Genre:</strong> {data.movieInfo.genres}</li>
                                         <li><strong>Released:</strong>{data.movieInfo.release_date}</li>
                                         <li><strong>Rated:</strong> {data.movieInfo.vote_average}</li>
                                         <li><strong>Runtime:</strong> {data.movieInfo.runtime}</li>
                                         <li><strong>Production Companies:</strong> {data.movieInfo.production_companies}</li>
                                     </ul>
-                                    <div className="videos">
+                                    <div className="movieinfo__videos">
                                         {this.videoToggle()}
                                         <h3>Videos</h3>
                                         {this.renderVideos(data.movieInfo.videos)}
