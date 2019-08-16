@@ -4,12 +4,12 @@ export class MovieCredits extends Component {
     renderCast(credits){
         return credits.map(cast => {
             return (
-                <li key={cast.id}>
-                    <img src={`https://image.tmdb.org/t/p/w500//${cast.profile_path}`}/>
-                    <div className="moviecredits__castWrapper">
-                        <div className="moviecredits__castWrapper_info">
-                            <span>{cast.name}</span>
-                            <span>{cast.character}</span>
+                <li className="moviecredits__cast" key={cast.id}>
+                    <img className="moviecredits__cast-image" src={`https://image.tmdb.org/t/p/w500//${cast.profile_path}`}/>
+                    <div className="moviecredits__cast-wrapper">
+                        <div className="moviecredits__cast-wrapper-info">
+                            <span className="moviecredits__cast-wrapper-info-name">{cast.name}</span>
+                            <span className="moviecredits__cast-wrapper-info-character">{cast.character}</span>
                         </div>
                     </div>
                 </li>
@@ -18,7 +18,7 @@ export class MovieCredits extends Component {
     }
     render(){
         return (
-            <ul className="moviecredits__cast">{this.renderCast(this.props.credits)}</ul>
+            <ul className="moviecredits">{this.renderCast(this.props.credits)}</ul>
         )
     }
 }

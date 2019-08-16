@@ -7,8 +7,9 @@ $ns: '.movieinfo';
     }
 
     &__wrapper {
-        position: absolute;
-        width: 100%;
+        max-width: 130rem;
+        margin: auto;
+        position: relative;
     }
 
     &__description {
@@ -29,8 +30,6 @@ $ns: '.movieinfo';
     }
 
     &__credits {
-        width: 30%;
-        margin: 2%;
-        padding: 1rem;
+        
     }
 }

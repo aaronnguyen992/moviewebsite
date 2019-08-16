@@ -4,16 +4,16 @@ class MovieReviews extends Component {
     renderReviews(reviews){
         return reviews.map(review => {
             return (
-                <article key={review.id}>
-                    <h4>{review.author} writes</h4>
-                    <div>{review.content}</div>
+                <article className="moviereviews__wrapper" key={review.id}>
+                    <h4 className="moviereviews__author">{review.author} writes</h4>
+                    <div className="moviereviews__content">{review.content}</div>
                 </article>
             )
         })
     }
     render() {
         return (
-            <div className="reviews">
+            <div className="moviereviews">
                 {this.renderReviews(this.props.reviews)}
             </div>
         )
