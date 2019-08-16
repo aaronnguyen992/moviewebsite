@@ -14,4 +14,4 @@ This is a website designed to use the IMDB API to give information on currently 
 * My significant other, Deegii, for helping me every step of the way to become a Software Engineer
 * My mom, Kieu, for helping me every step of my life
 
-And a special thanks to [Aurel Kurula](https://dev.to/aurelkurtula) for inspiring this website (originally using Babel 6) with his posts on dev.to, 
+And a special thanks to [Aurel Kurula](https://dev.to/aurelkurtula) for inspiring this website (originally using Babel 6) with his posts on dev.to 
