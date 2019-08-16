@@ -1,0 +1,46 @@
+$ns: '.moviecredits';
+
+#{$ns} {
+    width: 40%;
+    float: left;
+    margin: 0;
+    padding: 0;
+
+    &__cast {
+        list-style: none;
+        margin: 5rem auto;
+        position: relative;
+        height: 15rem;
+
+        &-image {
+            position: absolute;
+            left: 0;
+            top: 12%;
+            width: 8rem;
+            margin-right: 1rem;
+        }
+
+        &-wrapper {
+            background: $color3;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 80%;
+            height: 100%;
+
+            &-info {
+                width: 70%;
+                padding-top: 3rem; 
+
+                span {
+                    display: block;
+                }
+
+                &-character {
+                    color: $color-black;
+                    font-weight: 800;
+                }
+            }
+        }
+    }
+}
