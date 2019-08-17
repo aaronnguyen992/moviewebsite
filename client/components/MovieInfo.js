@@ -54,7 +54,8 @@ class MovieInfo extends Component {
                     if(loading) return <div>Loading...</div>
                     return (
                         <div>
-                            <header style={{backgroundImage: 'url("https://image.tmdb.org/t/p/w500///'+ data.movieInfo.poster_path+'")'}}>
+                            <a href="/" className="btn__home">Home</a>
+                            <header className="movieinfo__header">
                                 <h2 className="movieinfo__title">{data.movieInfo.title}</h2>
                             </header>
                             <article className="movieinfo__wrapper">
